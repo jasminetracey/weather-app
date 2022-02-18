@@ -1,5 +1,6 @@
+import { subMonths, subWeeks } from "date-fns";
 import { useState } from "react";
-import Calendar from "react-calendar";
+import DatePicker from "react-datepicker";
 
 import CitiesTab from "../components/CitiesTabs";
 
@@ -19,7 +20,13 @@ const Home = () => {
             <CitiesTab date={date} />
           </div>
           <div>
-            <Calendar maxDate={new Date()} onChange={setDate} value={date} />
+            <DatePicker
+              minDate={subWeeks(new Date(), 2)}
+              maxDate={new Date()}
+              onChange={(date) => setDate(date)}
+              selected={date}
+              inline
+            />
           </div>
         </div>
       </div>
