@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import "../styles/globals.css";
+import "react-calendar/dist/Calendar.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
