@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     let results = [];
 
     const dateRange = eachDayOfInterval({
-      start: subDays(new Date(), 4),
+      start: subDays(new Date(), 5),
       end: parseISO(date),
     })?.map((date) => getUnixTime(date));
 
